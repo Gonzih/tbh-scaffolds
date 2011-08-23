@@ -1,0 +1,20 @@
+= form_for @<%= singular_table_name %> do |f|
+
+<% for attribute in attributes -%>
+  - if @<%= singular_table_name %>.errors[:<%= attribute.name %>].any?
+    .clearfix.error
+      = f.label :<%= attribute.name %>
+      .input
+        = f.<%= attribute.field_type %> :<%= attribute.name %>, :class => 'error'
+        .help-inline
+          - @<%= singular_table_name %>.errors[:<%= attribute.name %>].each do |msg|
+            %p= msg
+  - else
+    .clearfix
+      .input
+        = f.label :<%= attribute.name %>
+        = f.<%= attribute.field_type %> :<%= attribute.name %>
+
+<% end -%>
+
+  = f.submit 'Save', :class => 'btn primary save'

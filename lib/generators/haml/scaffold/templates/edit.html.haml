@@ -1,0 +1,6 @@
+%h1 Editing <%= singular_table_name %>
+
+= render 'form'
+
+= button_to 'Destroy', @<%= singular_table_name %>, :confirm => 'Are you sure?', :method => :delete, :class => 'btn danger'
+= button_to 'Back', <%= index_helper %>_path, :method => :get, :class => 'btn'
