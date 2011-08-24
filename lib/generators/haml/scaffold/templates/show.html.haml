@@ -1,4 +1,7 @@
-%p#notice= notice
+- if notice
+  .alert-message.success
+    %a.close(href='#') x
+    %p= notice
 
 <% for attribute in attributes -%>
 %p
