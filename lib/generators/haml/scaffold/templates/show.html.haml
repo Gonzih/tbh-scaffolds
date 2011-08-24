@@ -6,5 +6,5 @@
   = @<%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
 
-= button_to 'Edit', edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), :method => :get, :class => 'btn primary'
-= button_to 'Back', <%= index_helper %>_path, :method => :get, :class => 'btn'
+= link_to 'Edit', edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), :class => 'btn primary float_left'
+= link_to 'Back', <%= index_helper %>_path, :class => 'btn float_left'

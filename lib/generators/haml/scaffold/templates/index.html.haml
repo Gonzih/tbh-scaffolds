@@ -16,10 +16,10 @@
 <% for attribute in attributes -%>
         %td= <%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
-        %td= button_to 'Show', <%= singular_table_name %>, :method => :get, :class => 'btn'
-        %td= button_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>), :method => :get, :class => 'btn primary'
-        %td= button_to 'Destroy', <%= singular_table_name %>, :confirm => 'Are you sure?', :method => :delete, :class => 'btn danger'
+        %td= link_to 'Show', <%= singular_table_name %>, :class => 'btn float_left'
+        %td= link_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>), :class => 'btn primary float_left'
+        %td= link_to 'Destroy', <%= singular_table_name %>, :confirm => 'Are you sure?', :method => :delete, :class => 'btn danger float_left'
 
 %br
 
-= button_to 'New <%= human_name %>', new_<%= singular_table_name %>_path, :method => :get, :class => 'btn primary'
+= link_to 'New <%= human_name %>', new_<%= singular_table_name %>_path, :class => 'btn primary float_left'

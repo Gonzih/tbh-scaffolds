@@ -2,5 +2,5 @@
 
 = render 'form'
 
-= button_to 'Destroy', @<%= singular_table_name %>, :confirm => 'Are you sure?', :method => :delete, :class => 'btn danger'
-= button_to 'Back', <%= index_helper %>_path, :method => :get, :class => 'btn'
+= link_to 'Destroy', @<%= singular_table_name %>, :confirm => 'Are you sure?', :method => :delete, :class => 'btn danger float_left'
+= link_to 'Back', <%= index_helper %>_path, :class => 'btn float_left'
