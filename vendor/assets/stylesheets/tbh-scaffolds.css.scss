@@ -3,8 +3,17 @@
   margin-left: 5px;
 }
 
+input.float_left {
+  position: relative;
+  bottom: 2px;
+}
+
 div.input {
-  input {
+  input, textarea, select {
     margin-left: 5px;
   }
+}
+
+.button_column {
+  width: 50px;
 }
