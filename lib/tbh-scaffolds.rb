@@ -1,4 +1,5 @@
-require "tbh-scaffolds/version"
+require 'haml'
+require 'rails'
 
 module Tbh
   module Scaffolds
