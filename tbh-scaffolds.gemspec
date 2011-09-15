@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.name        = "tbh-scaffolds"
   s.version     = Tbh::Scaffolds::VERSION
   s.authors     = ["Max Gonzih"]
-  s.email       = ["gonzih@gmail.com"]
+  s.email       = ["iam@gonzih.org"]
   s.homepage    = "https://github.com/Gonzih/tbh-scaffolds"
   s.summary     = %q{Twitter Bootstrap Haml Scaffolds}
   s.description = %q{Scaffolds templates based on Twitter Bootstrap framework}
