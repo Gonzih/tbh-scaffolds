@@ -9,5 +9,5 @@
   = @<%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
 
-= link_to 'Edit', edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), :class => 'btn primary float_left'
-= link_to 'Back', <%= index_helper %>_path, :class => 'btn float_left'
+= link_to 'Edit', edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), :class => 'btn primary'
+= link_to 'Back', <%= index_helper %>_path, :class => 'btn'

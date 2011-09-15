@@ -1,20 +1,34 @@
 = form_for @<%= singular_table_name %> do |f|
 
-<% for attribute in attributes -%>
+<% attributes.each do |attribute| -%>
   - if @<%= singular_table_name %>.errors[:<%= attribute.name %>].any?
     .clearfix.error
       = f.label :<%= attribute.name %>
       .input
+<% if [:date_select, :datetime_select, :time_select].include?(attribute.field_type) -%>
+        = f.<%= attribute.field_type %> :<%= attribute.name %>, {}, :class => 'small error'
+<% elsif [:text_area].include?(attribute.field_type) -%>
+        = f.<%= attribute.field_type %> :<%= attribute.name %>, :class => 'xxlarge error'
+<% else -%>
         = f.<%= attribute.field_type %> :<%= attribute.name %>, :class => 'error'
-        .help-inline
+<% end -%>
+        %span.help-inline
           - @<%= singular_table_name %>.errors[:<%= attribute.name %>].each do |msg|
-            %p= msg
+            %p.error= msg
   - else
     .clearfix
+      = f.label :<%= attribute.name %>
       .input
-        = f.label :<%= attribute.name %>
+<% if [:date_select, :datetime_select, :time_select].include?(attribute.field_type) -%>
+        = f.<%= attribute.field_type %> :<%= attribute.name %>, {}, :class => 'small'
+<% elsif [:text_area].include?(attribute.field_type) -%>
+        = f.<%= attribute.field_type %> :<%= attribute.name %>, :class => 'xxlarge'
+<% else -%>
         = f.<%= attribute.field_type %> :<%= attribute.name %>
+<% end -%>
 
 <% end -%>
 
-  = f.submit 'Save', :class => 'btn primary float_left'
+  .actions
+    = f.submit 'Save', :class => 'btn primary'
+    = link_to 'Back', <%= index_helper %>_path, :class => 'btn'
