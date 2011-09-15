@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Max Gonzih"]
   s.email       = ["gonzih@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Twitter Bootstrap Haml Scaffolds}
+  s.description = %q{Scaffolds templates based on Twitter Bootstrap framework}
 
   s.rubyforge_project = "tbh-scaffolds"
 
@@ -20,5 +20,5 @@ Gem::Specification.new do |s|
 
   # specify any dependencies here; for example:
   s.add_development_dependency "rake"
-  # s.add_runtime_dependency "rest-client"
+  s.add_runtime_dependency "haml"
 end
